@@ -43,30 +43,15 @@
 
     const doc = document.documentElement;
 
-    function toggleTheme(){
-        const currentTheme = doc.getAttribute("data-theme");
-        // console.log(currentTheme);
-
-        // using if...else statement
-        // let newTheme
-        // if (currentTheme === "dark"){
-        //     newTheme = "light"
-        // } else {
-        //     newTheme = "dark"
-        // }
-
-        // using ternary operator instead for if...else statement.
-        const newTheme = (currentTheme === "dark") ? "light" : "dark";
-        doc.setAttribute("data-theme",newTheme)
-
-
-
-    }
-
-
     const toggle = document.getElementById("toggle")
     // console.log(toggle);
-    toggle.addEventListener('change', toggleTheme);
+
+    // Using arrow function
+    toggle.addEventListener('change', () => {
+        const currentTheme = doc.getAttribute("data-theme");
+        const newTheme = (currentTheme === "dark") ? "light" : "dark";
+        doc.setAttribute("data-theme",newTheme);
+    });
 
 </script>
 </body>

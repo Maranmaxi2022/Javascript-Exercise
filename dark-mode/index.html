@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-theme="dark">
+<html data-theme="dark" >
 
 <head>
 
@@ -40,15 +40,25 @@
 
 </footer>
 <script id="theme.js">
+
     const doc = document.documentElement;
 
-    const toggleDarkMode = (event) => {
-        const currentTheme = doc.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        doc.setAttribute('data-theme', newTheme);
+    function toggleTheme(){
+        const currentTheme = doc.getAttribute("data-theme");
+        // console.log(currentTheme);
+        let newTheme
+        if (currentTheme === "dark"){
+            newTheme = "light"
+        } else {
+            newTheme = "dark"
+        }
+        doc.setAttribute("data-theme",newTheme)
     }
 
-    document.getElementById('toggle').addEventListener("change", toggleDarkMode)
+
+    const toggle = document.getElementById("toggle")
+    // console.log(toggle);
+    toggle.addEventListener('change', toggleTheme);
 
 </script>
 </body>

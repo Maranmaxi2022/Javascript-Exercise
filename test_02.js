@@ -8,3 +8,13 @@ console.log("Specific date:", specificDate);
 
 const specificDate_02 = new Date(2024,2,21);
 console.log("Specific date:",specificDate_02);
+
+// Formatting date to 'MM/DD/YYYY' style
+const formattedDate = now.toLocaleDateString("en-US");
+console.log("Formatted date:", formattedDate);
+
+// Formatting time
+const formattedTime = now.toLocaleTimeString("en-US");
+console.log("Formatted time:", formattedTime);
+
+

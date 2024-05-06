@@ -17,4 +17,11 @@ console.log("Formatted date:", formattedDate);
 const formattedTime = now.toLocaleTimeString("en-US");
 console.log("Formatted time:", formattedTime);
 
+// Getting Individual Components
+console.log("Year:", now.getFullYear());
+console.log("Month (0-indexed):", now.getMonth()); // 0 = January
+console.log("Day:", now.getDate());
+console.log("Hours:", now.getHours());
+console.log("Minutes:", now.getMinutes());
+console.log("Seconds:", now.getSeconds());
 

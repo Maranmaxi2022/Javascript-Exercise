@@ -30,3 +30,12 @@ console.log("Seconds:", now.getSeconds());
 const futureDate = new Date(now);
 futureDate.setDate(now.getDate() + 7);
 console.log("Future date:", futureDate);
+
+// Calculating Differences Between Dates
+const pastDate = new Date(2024, 0, 1);
+console.log("Date in local timezone:", pastDate.toLocaleDateString());
+console.log("Date and time in local timezone:", pastDate.toLocaleString());
+const diffMilliseconds = now - pastDate;
+console.log(diffMilliseconds);
+const diffDays = diffMilliseconds / (1000 * 60 * 60 * 24);
+console.log(`Difference between now and past date: ${diffDays} days`);

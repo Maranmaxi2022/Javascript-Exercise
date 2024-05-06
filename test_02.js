@@ -25,3 +25,8 @@ console.log("Hours:", now.getHours());
 console.log("Minutes:", now.getMinutes());
 console.log("Seconds:", now.getSeconds());
 
+
+// Add 7 days to the current date
+const futureDate = new Date(now);
+futureDate.setDate(now.getDate() + 7);
+console.log("Future date:", futureDate);
